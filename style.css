@@ -246,10 +246,6 @@ footer .social a:hover {
   transform: translateY(0);
 }
 
-.section {
-  padding: 5rem 0;
-}
-
 .section header,
 #testimonials header {
   max-width: 32rem;
