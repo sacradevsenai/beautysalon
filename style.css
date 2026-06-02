@@ -69,7 +69,6 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
 }
 
 .logo {
@@ -243,14 +242,9 @@ footer .social a:hover {
   transform: translateY(0);
 }
 
-.container{
-  margin-left: auto;
-  margin-right: auto;
-}
 .section {
-  padding: 10rem 10rem;
+  padding: 5rem 0;
 }
-
 
 .section header,
 #testimonials header {
@@ -268,6 +262,7 @@ footer .social a:hover {
 nav .menu {
   opacity: 0;
   visibility: hidden;
+  display: none;
   top: 0;
   margin-left: auto;
 }
@@ -299,25 +294,29 @@ main {
 /* home */
 
 #home .container {
-  grid-auto-flow: column;
-  justify-content: space-between;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2rem;
 }
 
 #home .image {
-  order: 1;
+  order: 0;
 }
 
 #home .text {
-  order: 0;
-  max-width: 24rem;
-  text-align: left;
+  order: 1;
+  max-width: 100%;
+  width: 100%;
+  text-align: center;
 }
 
 /* about */
 #about .container {
-  margin: 0 auto;
-  grid-auto-flow: column;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2rem;
 }
 
 /* services */
@@ -352,9 +351,10 @@ footer.section {
 }
 
 footer .container {
-  grid-auto-flow: column;
-  align-items: center;
-  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2rem;
 }
 
 footer .logo {
@@ -370,11 +370,10 @@ footer .logo {
     --subtitle-font-size: 1.125rem;
   }
 
-.container {
+  .container {
     max-width: 1120px;
     margin-left: auto;
     margin-right: auto;
-   
 
   }
 
@@ -388,9 +387,10 @@ footer .logo {
   }
 
   nav .menu {
+    display: flex;
     opacity: 1;
     visibility: visible;
-    position: static; /* Remove o comportamento de "borda flutuante" do mobile */
+    position: static;
   }
 
   nav .menu ul {
@@ -403,5 +403,26 @@ footer .logo {
     color: var(--text-color);
     -webkit-font-smoothing: antialiased;
   }
+
+  #home .container {
+    display: grid;
+    grid-auto-flow: column;
+    /* Aqui sim vira coluna no computador */
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+  #home .image {
+    order: 1;
+    /* Inverte a ordem no PC se necessário */
+  }
+
+  #home .text {
+    order: 0;
+    max-width: 24rem;
+    text-align: left;
+    /* Alinha à esquerda no PC, como na referência */
+  }
 }
+
 /* large devices: 767 > */
