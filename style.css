@@ -423,6 +423,13 @@ footer .logo {
     text-align: left;
     /* Alinha à esquerda no PC, como na referência */
   }
+
+  #about .container {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
 }
 
 /* large devices: 767 > */
