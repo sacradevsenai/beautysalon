@@ -430,6 +430,22 @@ footer .logo {
     justify-content: space-between;
     margin: 0 auto;
   }
+
+  footer .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  gap: 2rem;
+}
+
+.back-to-top {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    right: 2rem;
+    bottom: 2rem;
+  }
 }
 
 /* large devices: 767 > */
